@@ -1,0 +1,231 @@
+*{
+	box-sizing: border-box;
+}
+/* styles for body */
+body{
+	background-color: #D2B48C; /* set background-color */
+	color: #221811;/* set text color */
+	font-family : Tahoma, Arial, sans-serif; /* Define font-family */
+	margin:0;
+}
+
+/* styles for the wrapper */
+#wrapper {
+	background-color: #231814;/* set background-color */
+	padding:0;
+}
+	
+	/* styles for the header*/
+header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color:#D2B48C;/* set background-color*/
+	color: #231814; /* set text color */
+	background-color:#D2B48C;
+	background-image: url(../image/cup.jpg);
+	background-repeat:no-repeat;
+	padding-left:220px;
+	height:auto
+	}
+	header a  { text-decoration: none;}
+	header a:link {color:#231814;}
+	header a:visited { color:#231814;}
+	header a:hover {color:#FEE6C2}
+	/* styles for headings */
+h1 { 
+	font-size: 3em; /* set font size for h1*/
+}
+h2 {
+	color :#8C3826; /* set text color for h2*/
+}
+h3, dt {
+	color: #8C3826;/* set text color for h3 and dt*/
+}
+h4 {
+	background-color: #D2B48C; /* set background color for h4 */
+	font-size: 1.2em;/* set font size for h4*/
+	padding-left: .5em; /* Add left padding*/
+	padding-bottom: 0; /* Add bottom padding*/
+	text-transform: uppercase;
+	border-bottom: 1px solid #221811;
+	clear: left;
+}
+/* styles for Navigation */
+nav {
+	text-align: center; /* align text to the centder */
+	font-size: 1.5em; /* set font size*/
+}
+nav a {text-decoration: none; /* Remove underline from links */}
+nav a:link {
+color: #FEE6C2;
+}
+nav a:visited {
+color: #D2B48C;
+}
+nav a:hover { 
+color:#CC9933;
+	
+}
+
+nav ul {
+	flex-flow:row wrap;
+	justify-content: space-around;
+	display: flex;
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+nav li{
+	border-bottom: none;
+}
+main{
+	background-color: #FEF6C2;
+	display: block;
+	padding: 0 0 20em 0;
+}
+h2, h3, h4, p, div, ul, dl {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+main ul { padding-left: 2em;} 
+/* styles for images*/
+.details {
+	padding-left: 20%;
+	padding-right: 20%;
+	overflow: auto;
+}
+img {
+	padding-left: 10px; /*Add left padding*/
+	padding-right: 10px; /*Add right padding*/
+}
+/*styles for Home Hero */
+#homehero {
+	height: 300px; /* set height */
+	background-image: url(../image/road.jpg); /* set background image */
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#heromugs {
+	height: 300px;
+	background-image: url(../image/threemugs.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#heroguitar {
+	height: 300px;
+	background-image: url(../image/guitar.jpg); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+#herojobs {
+	height: 300px;
+	background-image: url(../image/hero.jpg); 
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+footer{
+	background-color: #D2B48C;
+	font-size:.60em;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 1em;
+	border-top: 2px solid #8C3826;
+}
+table { 
+margin: auto;
+width: 90%;
+border-spacing: 0;
+}
+th,td {
+	padding: 10px;
+}
+tr:nth-of-type(odd) {
+	background-color: #D2B48E;
+}
+h1{
+	font-size: 3em;
+}
+nav ul{
+	flex-flow: row wrap;
+	justify-content: space-around;
+	display: flex;
+}
+nav li{
+	border-bottom: none;
+}
+#homehero{
+	background-image: url(../image/hero.jpg);
+	height: 50%
+}
+#heromugs{
+	background-image: url(../image/heromugs.jpg);
+}
+#heroguitar {
+background-image: url(../image/heroguitar.jpg);
+}
+#herojobs {
+	background-image: url(../image/herojobs.jpg);
+}
+#flow{
+	display:flex;
+	flex-direction: row;
+	display: grid;
+}
+#mobile{
+	display: none;
+}
+#desktop{
+	display:inline;
+}
+.details {
+	display: flex;
+	flex-direction: row;
+}
+h4 {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+/*styles for the form*/
+form {
+	width: 40%;
+	display: grid;
+	grid-gap: 2em; gap: 1em;
+	grid-template-columns: 7em 1fr;
+}
+input[type="submit"]{
+	grid-column: 2/3;
+width: 9em;}
+input[type="reset"]{
+	grid-column: 2/3;
+	width: 9em;
+}
+@media (min-width: 1024px) {
+@supports (display: grid) {
+	header {
+		grid-area: header;
+	}
+	nav {
+		grid-area: nav;
+	}
+	main {
+		grid-area: main;
+	}
+	footer {
+		grid-area: footer;
+	}
+	#wrapper {
+		display: grid;
+		grid-template:
+			"header header"
+			"nav main"
+			"footer footer"
+			/200px;
+	}
+	nav ul{
+		flex-direction: column;
+	}
+	header {
+		background-image:url(../image/coffeelogo.jpg);
+	}
+}
+}
