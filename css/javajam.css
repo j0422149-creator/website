@@ -199,6 +199,12 @@ input[type="reset"]{
 	grid-column: 2/3;
 	width: 9em;
 }
+input,textarea {
+	margin-bottom: .5em;
+}
+audio {display: block;
+margin-top: 1em;
+}
 @media (min-width: 1024px) {
 @supports (display: grid) {
 	header {
